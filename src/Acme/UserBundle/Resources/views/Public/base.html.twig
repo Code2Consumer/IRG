@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %} InRealGame{% endblock %}</title>
+                    <style type="text/css">{% block stylesheets %}
+
+    .menue{
+        left: 0;
+        right: 0;
+        margin: auto;
+        position: absolute;
+        text-align: center;
+    }
+
+    .container{
+        margin: 0 30px 20px;px 30px;
+        height: auto;
+        border: solid black 2px;
+    }
+
+    ul, li{
+        display : inline;
+        list-style-type : none;
+    }
+
+    li{
+        padding: 15px;
+        margin: -3;
+        border: 2px solid black;
+    }
+
+        {% endblock %}
+        </style>
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+{% block body %}
+
+<ul class="menue">
+<li>Acceuille</li>
+<li>Profile</li>
+<li>Guild</li>
+<li> Connection / Déconnection </li>
+</ul>
+
+
+
+{% block content %}
+
+{% endblock content %}
+
+
+{% endblock body %}
+
+{% block javascripts %}{% endblock %}
+
+    </body>
+</html>

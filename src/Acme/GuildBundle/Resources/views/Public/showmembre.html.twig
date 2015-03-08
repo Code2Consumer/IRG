@@ -1,0 +1,17 @@
+{% extends "::template.html.twig" %}
+
+{% block titre %} Les membres de la guilde {% endblock titre %}
+
+{% block content %}
+
+ <table class="table">
+
+
+{% for keys in allmembres %}
+<tr>
+  <td> {{ keys.username}} </td>
+ </tr>
+{% endfor %}
+  </table>
+
+{% endblock content %}

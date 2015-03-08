@@ -1,0 +1,37 @@
+{% extends "::template.html.twig" %}
+
+
+
+{% block titre %} Postuler: {{GuildName}} {% endblock titre %}
+
+{% block content %}
+
+<br> 
+<br> 
+
+
+{% if postulant == null %}
+
+<form action=" {{ path('guild_postuler', { 'GuildId': GuildId, 'GuildName': GuildName }) }} " method="POST">
+
+{{ form_widget(form)}}
+
+<input type="submit">
+
+</form>
+
+
+</form>
+
+{% else %}
+
+<p class="btn-primary btn-lg success">
+
+<span class="glyphicon glyphicon-ok">  </span>
+
+Candidature envoyé 
+
+{% endif %}
+
+
+{% endblock content %}

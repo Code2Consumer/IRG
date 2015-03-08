@@ -1,0 +1,24 @@
+{% extends "::template.html.twig" %}
+
+
+
+{% block titre %} Tous Les profiles {% endblock titre %}
+
+{% block content %}
+
+
+{% for keys in Users%}
+
+<br>
+{{keys.username}}
+{{keys.id}}
+{{keys.email}}
+
+<br>
+
+
+
+{% endfor %}
+
+
+{% endblock content %}

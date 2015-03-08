@@ -1,0 +1,17 @@
+{% extends "::template.html.twig" %}
+
+{% block titre %} Créez Votre Evenement{% endblock titre %}
+
+{% block content %}
+
+<br> 
+<br>
+
+
+<form action=" {{ path('guild_new_event', { 'GuildId': GuildId }) }} " method="POST">
+
+{{ form_widget(form)}}
+<input type="submit">
+</form>
+
+{% endblock content %}

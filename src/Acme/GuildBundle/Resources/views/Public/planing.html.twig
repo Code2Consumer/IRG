@@ -1,0 +1,73 @@
+{% extends "::template.html.twig" %}
+
+
+{% block titre %} Planning/Calendrier {% endblock titre %}
+{% block content %}
+
+planing de la guild
+
+
+<br> 
+<br> 
+<br> 
+
+{% for i in 1..nbj %}
+{% for keys in event if keys.date|date("d") == i %}
+
+<div class="day-case">
+
+{{ i }} <br>
+{{ keys.titre }}<br>
+{{ keys.date|date('d-m') }}<br>
+{{ keys.auteurName }}<br>
+
+
+<a href=" {{ path('guild_show_event', { 'GuildId': GuildId, 'EventId' : keys.id}) }}"> +PlusD'info </a>
+</div>
+
+{% else %}
+<div class="day-case">
+
+{{ i }}
+
+
+</div>
+
+
+{% endfor %}
+{% endfor %}
+
+
+
+
+
+
+
+<br>
+
+<br>
+
+
+
+{# commentaire 
+
+{{ keys.titre }}<br>
+{{ keys.id }}<br>
+{{ keys.auteurName }}<br>
+{{ keys.date|date }}<br>
+{{ keys.infos }}<br>
+
+
+{{ keys.titre }}<br>
+{{ keys.id }}<br>
+{{ keys.auteurName }}<br>
+{{ keys.date|date }}<br>
+{{ keys.infos }}<br>
+
+
+{% if event.date|date("Y") == true %}
+
+lol
+
+{% endif %}#}
+{% endblock content %}

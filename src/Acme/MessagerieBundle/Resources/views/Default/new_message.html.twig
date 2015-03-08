@@ -1,0 +1,26 @@
+{% extends "::template.html.twig" %}
+
+
+
+{% block titre %} Nouveau message {% endblock titre %}
+
+{% block content %}
+
+{% if infotext is defined %}
+<p class='bg-success large'>
+<br>
+{{infotext}}
+<br>
+<br>
+</p>
+
+{% endif %}
+
+<form action="{{ path('messagerie_homepage')}}" method="POST">
+
+{{ form_widget(form)}}
+
+<input type="submit">
+</form>
+
+{% endblock content %}

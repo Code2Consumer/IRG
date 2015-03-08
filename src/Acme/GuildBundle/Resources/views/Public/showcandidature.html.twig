@@ -1,0 +1,21 @@
+{% extends "::template.html.twig" %}
+
+
+
+{% block titre %} Candidature de {{candidature.0.userName}} {% endblock titre %}
+
+{% block content %}
+
+<h3> {{candidature.0.messageTitre}} </h3>
+{{candidature.0.message}}
+
+
+<form action=" {{ path('guild_show_candidatures', { 'GuildId': GuildId, 'CandidatureId': CandidatureId }) }} " method="POST">
+
+{{ form_widget(form)}}
+
+<input value="Accepter" type="submit">
+</form>
+
+
+{% endblock content %}

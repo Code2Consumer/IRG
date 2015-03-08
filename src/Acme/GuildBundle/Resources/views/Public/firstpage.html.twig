@@ -1,0 +1,81 @@
+{% extends "::template-guild.html.twig" %}
+
+
+
+{% block titre %} {{ guild.GuildName }} {% endblock titre %}
+
+{% block content %}
+
+{#
+{{ guild.Serveur }}
+
+{{ guild.CoGM }}
+
+{{ guild.GM }}
+#}
+<br>
+
+<div class="row">
+<div class="col-md-6 col-md-offset-1">
+Ecrivez un message !
+<form action="#" method="POST">
+{{ form_widget(form)}}
+<input id="form-input" class="btn btn-primary" type="submit">
+</form>
+ </div>
+
+ </div>
+
+
+{% endblock content %}
+
+{% block right %}
+
+<div class="list-group">
+
+<a class="list-group-item" href="{{ path('guild_new_event', { 'GuildId': guild.id }) }}"> Creer un event </a>
+
+<a class="list-group-item" href=" {{ path('guild_show_allcandidatures', { 'GuildId': guild.id }) }}"> 
+
+{% if cand !=0 %}
+
+<span id="cand-count"> {{ cand }}
+</span>
+{% endif %}
+
+Les candidatures </a>
+
+<a class="list-group-item" href=" {{ path('guild_membres', { 'GuildId': guild.id }) }}"> Les membres </a>
+
+<a class="list-group-item" href=" {{ path('guild_planning', { 'GuildId': guild.id }) }}"> Le calendrier </a>
+
+</div>
+
+{% endblock right %}
+
+{% block actualite %}
+
+{% for keys in GuildPost|reverse %}
+<div class="row">
+  <div class="col-md-1">
+  </div>
+  <div class="col-md-8 well">
+
+
+<blockquote>
+  <p> {{keys.message}} </p>
+  <footer> {{keys.userName}} <cite title="Source Title"> {{keys.date|date('H')}}h
+{{keys.date|date('i')}} </cite></footer>
+</blockquote>
+
+
+
+
+</div>
+</div>
+{% endfor %}
+
+
+
+
+{% endblock actualite %}

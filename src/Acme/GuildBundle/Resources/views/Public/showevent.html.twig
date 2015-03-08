@@ -1,0 +1,51 @@
+{% extends "::template.html.twig" %}
+
+{% block titre %} {{event.0.titre}} {% endblock titre %}
+
+{% block content %}
+
+ Event créer par : {{event.0.auteurname}} <br>
+
+ date de l'event: {{ event.0.date|date('d-m-y')}} <br>
+
+ Description: <br> 
+ {{event.0.infos}}
+ <br> 
+ <br> 
+ <br> 
+
+{% if inscrit == null %}
+
+<form action="{{ path('guild_show_event', { 'GuildId':GuildId, 'EventId': EventId }) }}" method="POST">
+{{ form_widget(form)}}
+<input type="submit" class="btn btn-primary">
+</form>
+
+{% else %}
+<p class="btn-primary btn-lg success">
+<span class="glyphicon glyphicon-ok">  </span>
+Vous étes bien inscrit en tant que {{ inscrit.0.role }}
+</p>
+
+{% endif %}
+
+ <table class="table">
+  <tr class="width">
+  <td> Nom Du Participant</td>
+  <td> Role </td>
+  </tr>
+
+{% for keys in allinscrit %}
+<tr>
+  <td> {{ keys.userName}} </td>
+  <td> {{ keys.role}} </td>
+ </tr>
+{% endfor %}
+  </table>
+
+
+
+
+
+
+{% endblock content %}

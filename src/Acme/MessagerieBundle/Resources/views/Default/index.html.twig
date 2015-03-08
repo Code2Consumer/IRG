@@ -1,0 +1,35 @@
+{% extends "::template.html.twig" %}
+
+
+
+{% block titre %} Messagerie {% endblock titre %}
+
+{% block content %}
+
+<a href=" {{ path( 'nouveau_message' ) }} "> Ecrire un message </a>
+
+<table class="table table-hover">
+ 
+ <tr style=" font-weight:bold; ">
+  <td class="active"> Titre </td>
+  <td class="active"> Envoyeur </td>
+  <td class="active"> Date </td>
+  <td class="active">  </td>
+</tr>
+
+{% for keys in messages|reverse %}
+
+<tr>
+  <td class="active"> {{ keys.titre}} </td>
+  <td class="active"> {{ keys.nameEnv}} </td>
+  <td class="active"> {{ keys.date|date("m/d/Y") }} </td>
+  <td class="active"> <a href=" {{ path('lire_message', { 'id_message': keys.id }) }} "> lire</a> </td>
+</tr>
+{% endfor %}
+
+</table>
+
+
+
+
+{% endblock content %}

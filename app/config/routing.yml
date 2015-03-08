@@ -1,0 +1,11 @@
+messagerie:
+    resource: "@MessagerieBundle/Resources/config/routing.yml"
+    prefix:   /messagerie
+
+Guild:
+    resource: "@GuildBundle/Resources/config/routing.yml"
+    prefix:   /guild
+
+UserBundle:
+    resource: "@UserBundle/Resources/config/routing.yml"
+    prefix:   /

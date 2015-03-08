@@ -1,0 +1,47 @@
+guild_home:
+    pattern: /
+    defaults: { _controller: GuildBundle:Public:index }
+
+guild_first_page:
+    pattern: /{GuildId}/home
+    defaults: { _controller: GuildBundle:Public:FirstPage }
+
+guild_access_denied:
+    pattern: /access-denied
+    defaults: { _controller: GuildBundle:Public:AccessDenied}
+
+guild_create:
+    pattern: /creation
+    defaults: { _controller: GuildBundle:Public:Creation }
+
+guild_membres:
+    pattern: /{GuildId}/membres
+    defaults: { _controller: GuildBundle:Public:ShowMembres }
+
+guild_planning:
+    pattern: /{GuildId}/planning
+    defaults: { _controller: GuildBundle:Public:Planing }
+
+guild_new_event:
+    pattern: /{GuildId}/newevent
+    defaults: { _controller: GuildBundle:Public:AddEvent }
+
+guild_show_event:
+    pattern: /{GuildId}/planning/{EventId}
+    defaults: { _controller: GuildBundle:Public:ShowEvent }
+
+guild_postuler:
+    pattern: /{GuildId}/postuler/{GuildName}
+    defaults: { _controller: GuildBundle:Public:Postuler }
+
+guild_show_allcandidatures:
+    pattern: /{GuildId}/allcandidatures
+    defaults: { _controller: GuildBundle:Public:AllCandidatures }
+
+guild_show_candidatures:
+    pattern: /{GuildId}/candidature/{CandidatureId}
+    defaults: { _controller: GuildBundle:Public:ShowCandidature }
+
+guild_refuser_candidatures:
+    pattern: /{GuildId}/candidature/{CandidatureId}
+    defaults: { _controller: GuildBundle:Public:RefuserCandidature }

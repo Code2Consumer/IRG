@@ -1,0 +1,23 @@
+{% extends "::template.html.twig" %}
+
+
+
+{% block titre %} {{ message.0.titre}} {% endblock titre %}
+
+{% block content %}
+
+{{ message.0.date|date('d-m-y') }} 
+<br> 
+<a class="btn btn-primary" href=" {{ path('repondre', { 'id_destinataire': message.0.idDest }) }} "> Repondre </a>
+
+<br> 
+<br>
+{{ message.0.message }}
+
+<br> 
+<br> 
+
+
+
+
+{% endblock content %}

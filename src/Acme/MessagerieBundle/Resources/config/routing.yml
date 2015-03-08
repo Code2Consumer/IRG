@@ -1,0 +1,16 @@
+messagerie_homepage:
+    path:     /
+    defaults: { _controller: MessagerieBundle:Default:index }
+
+nouveau_message:
+    path:     /corbeau
+    defaults: { _controller: MessagerieBundle:Default:nouveau_message }
+
+lire_message:
+    path:     /read_message/{id_message}
+    defaults: { _controller: MessagerieBundle:Default:read_message }
+
+repondre:
+    path:     /corbeau/{id_destinataire}
+    defaults: { _controller: MessagerieBundle:Default:repondre }
+

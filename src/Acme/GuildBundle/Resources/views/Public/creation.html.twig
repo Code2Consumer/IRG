@@ -1,0 +1,18 @@
+{% extends "::template.html.twig" %}
+
+
+
+{% block titre %} Créez votre guilde {% endblock titre %}
+
+{% block content %}
+
+<br> 
+<br> 
+<form action="{{ path('guild_create')}}" method="POST">
+
+{{ form_widget(form)}}
+
+<input type="submit">
+</form>
+
+{% endblock content %}

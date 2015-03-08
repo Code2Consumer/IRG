@@ -1,0 +1,27 @@
+{% extends "::template.html.twig" %}
+
+
+
+{% block titre %} Toutes les candidature {% endblock titre %}
+
+{% block content %}
+
+{% for keys in candidatures %}
+
+
+
+  <h3> {{keys.messageTitre}} </h3>
+  <h5> {{keys.userName}} {{keys.date|date('d/m/y')}} </h5>
+  <p> {{ keys.message}} </p>
+  <p> {{ keys.situation}} </p>
+  <a href=" {{ path('guild_show_candidatures', { 'GuildId': keys.Guildid, 'CandidatureId': keys.id }) }}"> Afficher cette candidature </a>
+
+ 
+
+
+  <br>
+  <br>
+{% endfor %}
+
+
+{% endblock content %}

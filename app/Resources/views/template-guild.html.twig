@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %} InRealGame{% endblock %}</title>
+        <!-- Latest compiled and minified CSS -->
+
+
+                    <style type="text/css">{% block stylesheets %}
+
+    .menue{
+        left: 0;
+        right: 0;
+        top:0;
+        margin: auto;
+
+        text-align: center;
+    }
+
+    .container{
+        margin: 50px 20px 50px 20px;
+        height: auto;
+        border: solid black 2px;
+    }
+
+    .space{
+        margin: 50px 0px 20px 0px !important;
+    }
+    .align-center{
+        left: 0;
+        right: 0;
+        margin: auto;
+        position: absolute;
+    }
+
+    label{
+        margin-left: 50px;
+        margin-right: 150px;
+    }
+
+    input{
+       text-align: center;
+    }
+
+    .width{
+        font-weight: 600;
+    }
+
+
+    table{
+        text-align: center;
+    }
+
+    .day-case{
+        border: 1px solid black;
+        width: 100px;
+        position: relative;
+        display: inline-table;
+        height: 150px;
+    }
+
+    #acme_guildbundle_guildpost_message{
+        width: 400px;
+    }
+    #form-input{
+        float: right;
+        position: relative;
+    }
+
+    .border{
+        border: 2px solid black;
+    }
+        #cand-count {
+        background-color: red;
+        color: white;
+        text-align: center;
+        margin-right: 2px;
+        border-radius: 20%;
+        padding: 2px;
+    }
+
+        {% endblock %}
+        </style>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+
+<ul class="nav  nav-tabs nav-justified" role="tablist">
+<li role="presentation"><a href="{{ path('home') }}"> Home </a> </li> 
+<li role="presentation"> <a href="{{ path('show_profile') }}"> Profile </a> </li>
+<li role="presentation"> <a href="{{ path('messagerie_homepage') }}"> Messagerie </a> </li>
+<li role="presentation"> <a href="{{ path('guild_home') }}"> Guilde </a> </li>
+{% if app.user %}
+<!-- <li>  
+<a href="#"> Mon profile </a> 
+</li> -->
+<li>
+<a href="{{ path('logout') }}"> Deconnection </a> 
+</li>
+ {% else %}
+<li>
+<a href="#"> S'incrire </a>
+</li>
+<li>
+<a href="{{ path('login') }}"> Se Connecter </a>
+</li>
+{% endif %}
+</ul>
+
+
+<div class="row">
+  <div class="col-md-1 space">
+  </div>
+  <div class="col-md-8 space well">
+
+<h2>{% block titre %} Titre par default!! {% endblock titre %}</h2>
+
+    {% block content %}
+
+    {% endblock content %}
+  </div>
+
+  <div class="col-md-2 space">
+        {% block right %}
+
+        {% endblock right %}
+  </div>
+</div>
+
+    {% block actualite %}
+
+    {% endblock actualite %}
+
+    </body>
+</html>
