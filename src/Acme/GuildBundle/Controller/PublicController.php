@@ -462,5 +462,16 @@ $query = $em->createQuery('
          
         }
 
-
+/*                // La requête SQL
+        $sql = "SELECT * FROM guild where id = 12 ; ";
+        // Construction de l'objet ResultSetMapping
+        $rsm = new \Doctrine\ORM\Query\ResultSetMapping;
+        // On définie quel champs doit être retourné dans la réponse
+        $rsm->addScalarResult('id', 'id');
+        $rsm->addScalarResult('GM', 'GM');
+        // On récupère les résultats
+        $em=$this->getDoctrine()->getManager();
+        $id = $em
+        ->createNativeQuery($sql, $rsm)
+        ->getScalarResult();*/
 }

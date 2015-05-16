@@ -27,7 +27,7 @@
     <parameter key="kernel.charset">UTF-8</parameter>
     <parameter key="kernel.container_class">appDevDebugProjectContainer</parameter>
     <parameter key="database_driver">pdo_mysql</parameter>
-    <parameter key="database_host">127.0.0.1</parameter>
+    <parameter key="database_host">localhost</parameter>
     <parameter key="database_port">null</parameter>
     <parameter key="database_name">symfony</parameter>
     <parameter key="database_user">root</parameter>
@@ -2823,7 +2823,7 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>54d5fec411d5a</argument>
+            <argument>5557274920d9e</argument>
           </service>
         </argument>
       </argument>
@@ -3115,7 +3115,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.context"/>
-            <argument>54d5fec411d5a</argument>
+            <argument>5557274920d9e</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
           </service>
         </argument>
@@ -3523,7 +3523,7 @@
     <service id="doctrine.dbal.default_connection" class="stdClass" factory-method="createConnection" factory-service="doctrine.dbal.connection_factory">
       <argument type="collection">
         <argument key="driver">pdo_mysql</argument>
-        <argument key="host">127.0.0.1</argument>
+        <argument key="host">localhost</argument>
         <argument key="port">null</argument>
         <argument key="dbname">symfony</argument>
         <argument key="user">root</argument>

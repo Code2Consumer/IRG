@@ -43,15 +43,14 @@ class __TwigTemplate_9e0fd0b4764029a4269d46a5803d986e598b3533ff5237ebdd710d9b251
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["message"]) ? $context["message"] : $this->getContext($context, "message")), 0, array()), "date", array()), "d-m-y"), "html", null, true);
         echo " 
 <br> 
-<a class=\"btn btn-primary\" href=\" ";
-        // line 11
-        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("repondre", array("id_destinataire" => $this->getAttribute($this->getAttribute((isset($context["message"]) ? $context["message"] : $this->getContext($context, "message")), 0, array()), "idDest", array()))), "html", null, true);
-        echo " \"> Repondre </a>
 
+";
+        // line 15
+        echo "
 <br> 
 <br>
 ";
-        // line 15
+        // line 18
         echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["message"]) ? $context["message"] : $this->getContext($context, "message")), 0, array()), "message", array()), "html", null, true);
         echo "
 
@@ -76,6 +75,6 @@ class __TwigTemplate_9e0fd0b4764029a4269d46a5803d986e598b3533ff5237ebdd710d9b251
 
     public function getDebugInfo()
     {
-        return array (  55 => 15,  48 => 11,  43 => 9,  40 => 8,  37 => 7,  29 => 5,);
+        return array (  54 => 18,  49 => 15,  43 => 9,  40 => 8,  37 => 7,  29 => 5,);
     }
 }
