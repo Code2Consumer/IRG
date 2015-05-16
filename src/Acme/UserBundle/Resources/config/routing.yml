@@ -36,3 +36,7 @@ show_profile:
 show_all_profile:
     pattern: /touslesprofiles
     defaults: { _controller:UserBundle:Public:AllUsers }
+
+show_all_my_guilds:
+    pattern: /toutemesguils
+    defaults: { _controller:UserBundle:Public:ShowAllMyGuilds }

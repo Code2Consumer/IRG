@@ -1,0 +1,44 @@
+{% extends "::template.html.twig" %}
+
+
+{% block titre %} Toutes les guildes {% endblock titre %}
+
+{% block content %}
+
+<br>
+<br>
+
+
+
+<a href=" {{ path('guild_create')}}"> creer une guild </a>
+
+ <table class="table">
+  <tr class="width">
+  <td> Nom de la guilde </td>
+  <td> GM</td>
+  <td> MMO </td>
+  <td> Serveur </td>
+  <td> Lien </td>
+  <td>  </td>
+  </tr>
+</table> 
+
+
+{% for keys in allguild %}
+  <tr>
+
+<td>
+{{ keys.name.0 }}
+</td>
+<td> {{ keys.gM }} </td>
+<td> {{ allguild.keys.mMOPrincipale}} </td>
+<td> {{ allguild.keys.serveur }} </td>
+<td> <a href=" {{ path('guild_first_page', { 'GuildId': allguild.keys.id }) }}"> Liens vers la guild </a></td>
+<td> <a href=" {{ path('guild_postuler', { 'GuildId': allguild.keys.id, 'GuildName': allguild.keys.guildName }) }}"> Postuler </a></td>
+</tr>
+{% endfor %}
+
+
+
+
+{% endblock content %}

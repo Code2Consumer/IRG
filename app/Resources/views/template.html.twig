@@ -6,66 +6,65 @@
         <!-- Latest compiled and minified CSS -->
 
 
-                    <style type="text/css">{% block stylesheets %}
+        <style type="text/css">
+        {% block stylesheets %}
 
-    .menue{
-        left: 0;
-        right: 0;
-        top:0;
-        margin: auto;
+            .menue{
+                left: 0;
+                right: 0;
+                top:0;
+                margin: auto;
 
-        text-align: center;
-    }
+                text-align: center;
+            }
 
-    .container{
-        margin: 50px 20px 50px 20px;
-        height: auto;
-        border: solid black 2px;
-    }
+            .container{
+                margin: 50px 20px 50px 20px;
+                height: auto;
+                border: solid black 2px;
+            }
 
-    .space{
-        margin: 50px 30px 50px 30px !important;
-    }
-    .align-center{
-        left: 0;
-        right: 0;
-        margin: auto;
-        position: absolute;
-    }
+            .space{
+                margin: 50px 30px 50px 30px !important;
+            }
+            .align-center{
+                left: 0;
+                right: 0;
+                margin: auto;
+                position: absolute;
+            }
 
-    label{
-        margin-left: 50px;
-        margin-right: 150px;
-        width: 150px;
-    }
+            label{
+                margin-left: 50px;
+                margin-right: 150px;
+                width: 150px;
+            }
 
-    input{
-       text-align: center;
-    }
+            input{
+               text-align: center;
+            }
 
-    .width{
-        font-weight: 600;
-    }
+            .width{
+                font-weight: 600;
+            }
 
 
-    table{
-        text-align: center;
-    }
+            table{
+                text-align: center;
+            }
 
-    .day-case{
-        border: 1px solid black;
-        width: 100px;
-        position: relative;
-        display: inline-table;
-        height: 150px;
-    }
-
+            .day-case{
+                border: 1px solid black;
+                width: 100px;
+                position: relative;
+                display: inline-table;
+                height: 150px;
+            }
         {% endblock %}
         </style>
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
-
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
@@ -73,7 +72,7 @@
 <ul class="nav  nav-tabs nav-justified" role="tablist">
 <li role="presentation"><a href="{{ path('home') }}"> Home </a> </li> 
 <li role="presentation"> <a href="{{ path('show_profile') }}"> Profile </a> </li>
-<li role="presentation"> <a href="{{ path('messagerie_homepage') }}"> Messagerie </a> </li>
+<!-- <li role="presentation"> <a href="{{ path('messagerie_homepage') }}"> Messagerie </a> </li> -->
 <li role="presentation"> <a href="{{ path('guild_home') }}"> Guilde </a> </li>
 {% if app.user %}
 <!-- <li>  

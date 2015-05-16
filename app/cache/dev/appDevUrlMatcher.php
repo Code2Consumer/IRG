@@ -410,9 +410,17 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array('_route' => 'show_profile');
         }
 
-        // show_all_profile
-        if ($pathinfo === '/touslesprofiles') {
-            return array (  '_controller' => 'Acme\\UserBundle\\Controller\\PublicController::AllUsersAction',  '_route' => 'show_all_profile',);
+        if (0 === strpos($pathinfo, '/tou')) {
+            // show_all_profile
+            if ($pathinfo === '/touslesprofiles') {
+                return array (  '_controller' => 'Acme\\UserBundle\\Controller\\PublicController::AllUsersAction',  '_route' => 'show_all_profile',);
+            }
+
+            // show_all_my_guilds
+            if ($pathinfo === '/toutemesguils') {
+                return array (  '_controller' => 'Acme\\UserBundle\\Controller\\PublicController::ShowAllMyGuildsAction',  '_route' => 'show_all_my_guilds',);
+            }
+
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();

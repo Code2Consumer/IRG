@@ -41,6 +41,8 @@ class PublicController extends Controller
         /*var_dump($nbguild[0]['countg']);
         var_dump($nbuser[0]['countu']);*/
 
+        // Guildid
+
         return $this->render("UserBundle:Public:index.html.twig", 
             array(
                 'countu' => $nbuser,
@@ -49,6 +51,47 @@ class PublicController extends Controller
             );
     }
 
+    public function ShowAllMyGuildsAction(){
+
+/*        ELECT A.`quantite`,B.`quantite` AS `quantite_bis` FROM `tablea` A, `tableb` B');
+while ($data = mysql_fe*/
+
+
+        $userid=$this->get('security.context')->getToken()->getUser()->getId();
+/*        $sql = "SELECT * FROM guild guildmembres WHERE userid =".$userid.";";  */
+        $sql = "SELECT *
+                FROM guild G, guildmembres M
+                WHERE G.id=M.Guildid
+                AND M.userid = ".$userid.";";
+
+        // Construction de l'objet ResultSetMapping
+        $rsm = new \Doctrine\ORM\Query\ResultSetMapping;
+
+        // On définie quel champs doit être retourné dans la réponse
+        $rsm->addScalarResult('id', 'id');
+        $rsm->addScalarResult('Guild_name', 'name');
+        $rsm->addScalarResult('GM', 'GM');
+        $rsm->addScalarResult('CoGM', 'CoGM');
+        $rsm->addScalarResult('GM_id', 'GM_id');
+        $rsm->addScalarResult('MMO_Principale', 'MMO_Principale');
+        $rsm->addScalarResult('Serveur', 'Serveur');
+        $rsm->addScalarResult('Guildid', 'Guildid');
+        $rsm->addScalarResult('userid', 'userid');
+        $rsm->addScalarResult('username', 'username');
+
+        // On récupère les résultats
+        $em=$this->getDoctrine()->getManager();
+        $mesguilds = $em
+        ->createNativeQuery($sql, $rsm)
+        ->getScalarResult();
+
+
+        var_dump($mesguilds);
+        die();
+
+        return $this->render("UserBundle:Public:allmyguilds.html.twig", 
+            array(   'allguild'=> $mesguilds  ) );
+    }
 
     public function MonProfileAction()
     {

@@ -13,3 +13,6 @@
 [2014-11-09 20:33:07] security.DEBUG: Username "Teros" was reloaded from user provider. [] []
 [2014-11-09 20:33:07] request.CRITICAL: Uncaught PHP Exception LogicException: "The controller must return a response (null given). Did you forget to add a return statement somewhere in your controller?" at C:\wamp\www\InRealGame\app\bootstrap.php.cache line 2988 {"exception":"[object] (LogicException: The controller must return a response (null given). Did you forget to add a return statement somewhere in your controller? at C:\\wamp\\www\\InRealGame\\app\\bootstrap.php.cache:2988)"} []
 [2014-11-09 20:33:07] security.DEBUG: Write SecurityContext in the session [] []
+[2015-05-16 16:42:01] request.INFO: Matched route "home" (parameters: "_controller": "Acme\UserBundle\Controller\PublicController::indexAction", "_route": "home") [] []
+[2015-05-16 16:43:32] security.INFO: Populated SecurityContext with an anonymous Token [] []
+[2015-05-16 16:43:36] request.CRITICAL: Uncaught PHP Exception PDOException: "SQLSTATE[HY000] [1049] Unknown database 'symfony'" at C:\wamp\www\InRealGame\vendor\doctrine\dbal\lib\Doctrine\DBAL\Driver\PDOConnection.php line 40 {"exception":"[object] (PDOException: SQLSTATE[HY000] [1049] Unknown database 'symfony' at C:\\wamp\\www\\InRealGame\\vendor\\doctrine\\dbal\\lib\\Doctrine\\DBAL\\Driver\\PDOConnection.php:40)"} []

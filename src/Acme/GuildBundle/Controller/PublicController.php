@@ -49,6 +49,7 @@ class PublicController extends Controller
             array(   'allguild'=> $allguild  ));
     }
 
+
     public function FirstPageAction($GuildId)
     {   
         $userid=$this->get('security.context')->getToken()->getUser()->getId();
