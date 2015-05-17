@@ -36,7 +36,7 @@ class __TwigTemplate_e2921d8c96ea781927f57264412fda2581c87374ca3f938cdd7b22e4ac5
     {
         // line 8
         echo "
-<p> Vous devez faire partit de la guild pour acceder à sa page. </p>
+<p> Vous n'avez pas acces à cette page. </p>
 
 ";
     }

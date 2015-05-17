@@ -64,7 +64,8 @@ class appDevUrlGenerator extends Symfony\Component\Routing\Generator\UrlGenerato
         'register' => array (  0 =>   array (  ),  1 =>   array (  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/register',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
         'show_profile' => array (  0 =>   array (  ),  1 =>   array (  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/profile',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
         'show_all_profile' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'Acme\\UserBundle\\Controller\\PublicController::AllUsersAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/touslesprofiles',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
-        'show_all_my_guilds' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'Acme\\UserBundle\\Controller\\PublicController::ShowAllMyGuildsAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/toutemesguils',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
+        'show_all_my_guilds' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'Acme\\UserBundle\\Controller\\PublicController::ShowAllMyGuildsAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/toutemesguilds',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
+        'show_all_guilds_created' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'Acme\\UserBundle\\Controller\\PublicController::ShowAllGuildsCreatedAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/toutemesguildscree',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
     );
 
     /**

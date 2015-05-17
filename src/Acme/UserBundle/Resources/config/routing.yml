@@ -38,5 +38,9 @@ show_all_profile:
     defaults: { _controller:UserBundle:Public:AllUsers }
 
 show_all_my_guilds:
-    pattern: /toutemesguils
+    pattern: /toutemesguilds
     defaults: { _controller:UserBundle:Public:ShowAllMyGuilds }
+
+show_all_guilds_created:
+    pattern: /toutemesguildscree
+    defaults: { _controller:UserBundle:Public:ShowAllGuildsCreated }

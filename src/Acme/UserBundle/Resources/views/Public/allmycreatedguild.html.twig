@@ -1,7 +1,7 @@
 {% extends "::template.html.twig" %}
 
 
-{% block titre %} Toutes mes guildes {% endblock titre %}
+{% block titre %} Toutes les guildes que vous avec créé{% endblock titre %}
 
 {% block content %}
 
@@ -36,7 +36,7 @@
 	<td>
 	{{ keys.Serveur }}
 	</td>
-	<td> <a href="{{ path('guild_first_page', { 'GuildId': keys.Guildid }) }}"> Liens vers la guild </a></td>
+	<td> <a href="{{ path('guild_first_page', { 'GuildId': keys.id }) }}"> Liens vers la guild </a></td>
   </tr>
 {% endfor %}
 

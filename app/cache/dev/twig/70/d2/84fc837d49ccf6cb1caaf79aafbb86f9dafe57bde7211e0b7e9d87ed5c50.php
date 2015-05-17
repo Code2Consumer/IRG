@@ -58,10 +58,10 @@ class __TwigTemplate_70d284fc837d49ccf6cb1caaf79aafbb86f9dafe57bde7211e0b7e9d87e
         // line 94
         echo $this->env->getExtension('routing')->getPath("show_profile");
         echo "\"> Profile </a> </li>
-<li role=\"presentation\"> <a href=\"";
+<!-- <li role=\"presentation\"> <a href=\"";
         // line 95
         echo $this->env->getExtension('routing')->getPath("messagerie_homepage");
-        echo "\"> Messagerie </a> </li>
+        echo "\"> Messagerie </a> </li> -->
 <li role=\"presentation\"> <a href=\"";
         // line 96
         echo $this->env->getExtension('routing')->getPath("guild_home");

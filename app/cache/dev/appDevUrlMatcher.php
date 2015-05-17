@@ -416,9 +416,17 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return array (  '_controller' => 'Acme\\UserBundle\\Controller\\PublicController::AllUsersAction',  '_route' => 'show_all_profile',);
             }
 
-            // show_all_my_guilds
-            if ($pathinfo === '/toutemesguils') {
-                return array (  '_controller' => 'Acme\\UserBundle\\Controller\\PublicController::ShowAllMyGuildsAction',  '_route' => 'show_all_my_guilds',);
+            if (0 === strpos($pathinfo, '/toutemesguilds')) {
+                // show_all_my_guilds
+                if ($pathinfo === '/toutemesguilds') {
+                    return array (  '_controller' => 'Acme\\UserBundle\\Controller\\PublicController::ShowAllMyGuildsAction',  '_route' => 'show_all_my_guilds',);
+                }
+
+                // show_all_guilds_created
+                if ($pathinfo === '/toutemesguildscree') {
+                    return array (  '_controller' => 'Acme\\UserBundle\\Controller\\PublicController::ShowAllGuildsCreatedAction',  '_route' => 'show_all_guilds_created',);
+                }
+
             }
 
         }
